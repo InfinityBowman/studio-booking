@@ -6,7 +6,8 @@
     "dev": "concurrently \"next dev\" \"node api-server\"",
     "build": "next build",
     "start": "concurrently \"next start\" \"node api-server\"",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pm2:start": "pm2 start ecosystem.config.js"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^3.5.0",
