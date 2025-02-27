@@ -1,0 +1,38 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Space {
+  id           String        @id @default(cuid())
+  name         String
+  description  String?
+  hourlyRate   Decimal       @db.Decimal(10,2)
+  reservations Reservation[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  @@index([name])
+}
+
+model Reservation {
+  id          String   @id @default(cuid())
+  title       String
+  start       DateTime
+  end         DateTime
+  userId      String
+  spaceId     String
+  space       Space    @relation(fields: [spaceId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([userId])
+  @@index([start, end])
+  @@index([spaceId])
+  // Prevent overlapping reservations for the same space
+  @@unique([spaceId, start, end])
+}

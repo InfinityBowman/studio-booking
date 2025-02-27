@@ -55,7 +55,7 @@ export default function NavBar() {
             <ul className="lg:flex lg:space-x-4">
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="block text-white py-2 px-4 hover:bg-gray-700 rounded"
                 >
                   Home
