@@ -18,7 +18,7 @@ async function getAuth0ManagementToken() {
 
 export async function DELETE(
   request: Request,
-  { params }: { params: { userId: string } }
+  { params }: any
 ) {
   try {
     const token = await getAuth0ManagementToken();
