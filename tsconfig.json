@@ -32,6 +32,6 @@
     ".next/types/**/*.ts",
     "app/api/shows/route.js",
     "components/UserList.jsx"
-  ],
+, "app/api/admin/users/[userId]/route.js"  ],
   "exclude": ["node_modules"]
 }
