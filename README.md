@@ -1,4 +1,4 @@
-0. ssh -i /Users/jacobmaynard/Downloads/studio-booking.pem ec2-3-17-178-31.us-east-2.compute.amazonaws.com
+0. ssh -i /Users/jacobmaynard/Downloads/studio-booking.pem ec2-user@ec2-3-17-146-131.us-east-2.compute.amazonaws.com
 1. Pull
 2. cd into folder
 2. sudo systemctl restart postgresql

@@ -8,7 +8,7 @@
     "start": "concurrently \"next start\" \"node api-server\"",
     "lint": "next lint",
     "pm2:start": "pm2 start ecosystem.config.js",
-    "seed": "npx prisma db seed"
+    "seed": "NODE_OPTIONS='--loader ts-node/esm' npx ts-node prisma/seed.ts"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
