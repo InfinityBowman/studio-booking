@@ -25,6 +25,8 @@ export default function ReservePage() {
       });
   }, []);
 
+  console.log('Spaces:', spaces);
+
   const handleReservationCreate = async (reservation: { title: string; start: string; end: string }) => {
     const response = await fetch('/api/reservations', {
       method: 'POST',

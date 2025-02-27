@@ -61,6 +61,14 @@ export default function NavBar() {
                   Home
                 </a>
               </li>
+              <li>
+                <a
+                  href="/reserve"
+                  className="block text-white py-2 px-4 hover:bg-gray-700 rounded"
+                >
+                  Reserve
+                </a>
+              </li>
               {user ? (
                 <>
                   {roles.includes('admin') && (
